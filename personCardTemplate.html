@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <title>HACKATHON PERSON CARDS</title>
+    <style type="text/css">
+    /*/// FOR YOU TO DO://////
+
+1. CHANGE each word "beyonceg" to yourFirstNameMiddleInitial
+
+2. CHANGE each word "beyoncek" in it to yourFirstNameLastInitial
+
+2. change url in the background-image:url(____); to the "image address" of an image from online that represents you or something you care about in some way. The image address should end with "jpg" or "png".
+////////////////////////////////////////
+*/
+
+    .beyonceg {
+        background-image: url(https://i.pinimg.com/originals/2f/01/b2/2f01b2a59995b7d3fff56339f3bd7f1a.jpg);
+
+    }
+
+
+    .beyoncek-effect:hover {
+        animation-name:
+            transform:rotateZ(100rad);
+        transition-duration: 3s;
+        transition: ease-in;
+        background-image: url("http://images6.fanpop.com/image/photos/38500000/single-ladies-GIF-beyonce-38590601-500-215.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+
+/*   DONT CHANGE ANYTHING _IN THE CSS_ BELOW THIS POINT...JUST MOVE DOWN TO THE HTML!
+*/
+    .container {
+        width: 15vw;
+        margin: 1%;
+        text-align: center;
+        color: rgb(105, 105, 105);
+        font-size: 18px;
+        display: inline-block;
+        backface-visibility: hidden;
+        transition: 2s ease-in-out;
+        border-radius: 10%
+    }
+
+
+    .headshot {
+        backface-visibility: visible;
+        perspective: 1000;
+        background-color: rgba(245, 245, 245, 0.5);
+        width: 15vw;
+        height: 15vw;
+        position: relative;
+        display: inline-block;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10%;
+        top: 0%;
+        left: 0%;
+        margin-bottom: 5%;
+        background-color: rgb(176, 176, 176);
+        border: 1px grey solid;
+        -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        /*-webkit-transition: all 0.5s ease-out;
+-moz-transition: all 0.5s ease-out;*/
+        transition: 0.5s ease-in;
+    }
+
+
+    .your-name {
+        background-color: red;
+        backface-visibility: visible;
+        z-index: 10;
+        position: relative;
+        top: 0%;
+        font-size: 2.5vw;
+        font-family: Quicksand, sans-serif;
+        color: rgb(105, 105, 105);
+    }
+
+    .description-invisible {
+        z-index: -10;
+        opacity: 0;
+        /*   transform: rotateY(0deg); */
+        transition: 0.5s ease-in-out;
+        font-family: Quicksand, sans-serif;
+        font-size: 1.25vw;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        /*   text-align: left; */
+    }
+
+    .description-apparent {
+        /*   pointer-events: none; */
+        transform: rotateY(180deg);
+        z-index: 12;
+        text-align: left;
+        perspective: 1000;
+        transition-delay: 0.5s;
+        transition: 0.1s ease-in;
+        transform: rotateY(-180deg);
+        font-family: Quicksand, sans-serif;
+        font-size: 1.25vw;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        text-align: left;
+        animation-name: fadeToTransparent;
+        animation-duration: 8s;
+        background-color: rgb(176, 176, 176);
+        width: 95%;
+        height: 95%;
+        border-radius: 10%;
+        -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        padding: 2%;
+    }
+
+    @keyframes fadeToTransparent {
+        0% {
+            opacity: 1;
+            z-index: 1000;
+        }
+
+        50% {
+            opacity: 1;
+            z-index: 1000;
+        }
+
+        90% {
+            opacity: 1;
+            z-index: 1000;
+        }
+
+        100% {
+            opacity: 1;
+            z-index: 1000;
+        }
+    }
+
+    .headshot-flip {
+        text-align: right;
+        /*     pointer-events: none; */
+        transform: rotateY(180deg);
+        z-index: -5;
+        width: 15vw;
+        height: 15vw;
+        background-color: rgba(245, 245, 245, 0.5);
+        background-image: url();
+        margin-bottom: 10%;
+        margin-right: 2%;
+        border-radius: 10%;
+        text-align: left;
+        z-index: -10;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- DIRECTIONS: 
+
+
+In this HTML section, AGAIN replace all "beyoncek" with yourFirstNameLastInitial and replace all "beyonceg" with yourFirstNameMiddleInitial
+-->
+    <!-- DONT' CHANGE THIS -->
+    
+    <div class="container" onclick=showDescription() animationend=hideDescription() id="beyoncek-name">
+
+
+        <div id="beyonceK" class="headshot beyonceg beyoncek-effect">
+
+
+            <div id="beyoncek-description" class="description description-invisible">
+                
+                <p>🔥Website:</p> 
+                    	<a href="https://www.beyonce.com/">beyonce.com</a>
+              
+                    <p>🍋
+                        <a href="https://www.youtube.com/watch?v=PeonBmeFR8o">Best album</a></p>
+                    <p>🐙Github: <a href="https://github.com/dill/beyonce">mojopi.github.io</a>
+                    </p>
+             
+            </div>
+        </div>
+        Beyoncé
+    </div>
+
+    <script>
+    	
+  // DONT CHANGE THIS SECTION!!!!! IF eventually YOU WANT TO EXPERIMENT YOU CAN ADD YOUR OWN JAVASCRIPT UP HERE BUT DON'T CHANGE WHAT'S BELOW THE SLASHES PLEASE!
+
+
+
+
+///////////////////////////////////////////////////////////////
+//below I'm adding an event listener so that when someone clicks on the on div with the class "your-name" div at the bottom of the headshot, a class is added to the *description* div called "description-apparent," and a class called "description-invisible" is removed. Because of the properties in the description-apparent class, when the div is assigned to this class, it becomes visible in the browser for 15 seconds. Because there is an animation property which, as I wrote it changes the opacity of the description div from 1 back to 0 — the divs with the description-apparent class become visible for 15s. //
+
+var headshot = document.getElementsByClassName("headshot");
+var description = document.getElementsByClassName("description");
+
+//this is the function I call in "onclick" which is referred to in the HTML//
+function showDescription() {
+  
+  console.log(event);
+  var whoAmI = event.target.id;
+  var containerDivChild = event.target.children;
+  var containerGrandchild = event.target.lastElementChild.lastElementChild;
+
+  for (let item of containerDivChild) {
+    item.classList.add("headshot-flip");
+item.classList.remove(item.id+"-effect");
+    setTimeout(function() {
+      item.classList.remove("headshot");
+    }, 500);
+    containerGrandchild.classList.remove("description-invisible");
+    containerGrandchild.classList.add("description-apparent");
+  }
+}
+
+//below I'm adding an event listener so that when the animation ends, the div is re-assigned the class of "description-invisible" and the "description-apparent" class is removed//
+
+for (let item of description) {
+  item.addEventListener("animationend", function() {
+    item.classList.remove("description-apparent");
+    item.classList.add("description-invisible");
+    console.log("ended!");
+  });
+}
+
+for (let item of headshot) {
+  item.addEventListener("animationend", function() {
+        item.classList.add(item.id+"-effect");
+
+    item.classList.remove("headshot-flip");
+    item.classList.add("headshot");
+  });
+}
+
+
+
+    </script>
+</body>
+
+
+
+</html>
